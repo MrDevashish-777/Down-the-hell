@@ -61,7 +61,7 @@ def reinit():
 	global camera
 	player = Player()
 	platform_controller = PlatformController()
-	floor = Platform(0, SCREEN_HEIGHT-36, SCREEN_WIDTH, 36)
+	floor = Platform(0, SCREEN_HEIGHT-36, SCREEN_WIDTH-50, 36)
 	camera = Camera(player)
 
 # Initialize game objects
