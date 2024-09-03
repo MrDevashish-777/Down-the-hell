@@ -1,5 +1,5 @@
 import pygame
-from IceSprite import IceSprite
+from HellSteps import HellSteps
 pygame.init()
 
 from copy import deepcopy
@@ -19,5 +19,5 @@ class Platform:
 		rect.top -= camera.y
 		pygame.draw.rect(game_display, self.color, rect)
 		for i in range(self.x, self.x+self.width, 10):
-			sprite = IceSprite([i, self.y - camera.y])
+			sprite = HellSteps([i, self.y - camera.y])
 			game_display.blit(sprite.image, sprite.rect)	

@@ -20,8 +20,10 @@ class Player:
 	speed = 5
 
 	def __init__(self):
-		self.x = 30
-		self.y = 500
+		# self.x = 30
+		# self.y = 500
+		self.x = SCREEN_WIDTH//2
+		self.y = 3
 		self.score = -10 # negate floor platform
 
 		self.spritesheet_image = load_image('johnny-helll.jpg')
@@ -127,7 +129,12 @@ class Player:
 	def get_rect(self):
 		return pygame.Rect(self.x, self.y, self.width, self.height)
 
+	# def fallen_off_screen(self, camera):
+	# 	if self.y - camera.y + self.height >= SCREEN_HEIGHT:
+	# 		return True
+	# 	return False
+	
 	def fallen_off_screen(self, camera):
-		if self.y - camera.y + self.height >= SCREEN_HEIGHT:
+		if self.y <= camera.y:
 			return True
 		return False
