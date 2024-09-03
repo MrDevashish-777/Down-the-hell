@@ -30,7 +30,7 @@ reinit()
 
 try:
 	arrow_image = load_image("arrow.png")
-	background = load_image('background.jpg')
+	background = load_image('pixel-hell.webp')
 except Exception as e:
 	print(f"Error loading images: {e}")
 	pygame.quit()
