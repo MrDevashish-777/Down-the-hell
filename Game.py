@@ -28,16 +28,16 @@ def display_game_over_screen(game_display, background, player, text_color):
         fiery_font = pygame.font.Font("firetxt.TTF", 100)  # Replace with a fiery-themed font
         game_over_text = fiery_font.render("Game Over", True, (255, 69, 0))  # Fiery orange color
         game_display.blit(game_over_text, 
-            (SCREEN_WIDTH // 2 - game_over_text.get_width() // 2, SCREEN_HEIGHT // 3))
+            (SCREEN_WIDTH // 2 - game_over_text.get_width() // 2, SCREEN_HEIGHT // 4))
 
         # Display player's score with a red glow effect
-        glow_font = pygame.font.Font("scoretxt.TTF", 60)  # Replace with a glowing-themed font
+        glow_font = pygame.font.Font("scoretxt.TTF", 50)  # Replace with a glowing-themed font
         score_text = glow_font.render(f"Score: {player.score}", True, (255, 0, 0))  # Blood red color
         game_display.blit(score_text, 
             (SCREEN_WIDTH // 2 - score_text.get_width() // 2, SCREEN_HEIGHT // 2.5))
 
         # Display restart prompt with a flickering effect
-        flicker_font = pygame.font.Font("scoretxt.TTF", 50)  # Replace with a flickering-themed font
+        flicker_font = pygame.font.Font("scoretxt.TTF", 30)  # Replace with a flickering-themed font
         restart_prompt = flicker_font.render("Press SPACE to Descend Again", True, text_color)
         game_display.blit(restart_prompt, 
             (SCREEN_WIDTH // 2 - restart_prompt.get_width() // 2, SCREEN_HEIGHT // 2))
@@ -45,7 +45,7 @@ def display_game_over_screen(game_display, background, player, text_color):
         # Display return to menu prompt with a dim glow effect
         menu_prompt = flicker_font.render("Press ESC to Escape the Abyss", True, (139, 0, 0))  # Dark red
         game_display.blit(menu_prompt, 
-            (SCREEN_WIDTH // 2 - menu_prompt.get_width() // 2, SCREEN_HEIGHT // 1.8))
+            (SCREEN_WIDTH // 2 - menu_prompt.get_width() // 2, SCREEN_HEIGHT // 1.7))
 
     # Add some flames at the bottom of the screen
     # flames_image = load_image("flames.png")  # Load a flames image
