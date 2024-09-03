@@ -15,6 +15,45 @@ black = (0,0,0)
 blue = (0,0, 255)
 white = (255,255,255)
 
+def display_game_over_screen(game_display, background, player, text_color):
+    # Darken the background for a more dramatic effect
+    dark_overlay = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT))
+    dark_overlay.set_alpha(150)  # Transparency level
+    dark_overlay.fill((0, 0, 0))
+    game_display.blit(background, (0, 0))
+    game_display.blit(dark_overlay, (0, 0))
+
+    # Display "Game Over" text with a fiery effect
+    if pygame.font:
+        fiery_font = pygame.font.Font("firetxt.TTF", 100)  # Replace with a fiery-themed font
+        game_over_text = fiery_font.render("Game Over", True, (255, 69, 0))  # Fiery orange color
+        game_display.blit(game_over_text, 
+            (SCREEN_WIDTH // 2 - game_over_text.get_width() // 2, SCREEN_HEIGHT // 3))
+
+        # Display player's score with a red glow effect
+        glow_font = pygame.font.Font("scoretxt.TTF", 60)  # Replace with a glowing-themed font
+        score_text = glow_font.render(f"Score: {player.score}", True, (255, 0, 0))  # Blood red color
+        game_display.blit(score_text, 
+            (SCREEN_WIDTH // 2 - score_text.get_width() // 2, SCREEN_HEIGHT // 2.5))
+
+        # Display restart prompt with a flickering effect
+        flicker_font = pygame.font.Font("scoretxt.TTF", 50)  # Replace with a flickering-themed font
+        restart_prompt = flicker_font.render("Press SPACE to Descend Again", True, text_color)
+        game_display.blit(restart_prompt, 
+            (SCREEN_WIDTH // 2 - restart_prompt.get_width() // 2, SCREEN_HEIGHT // 2))
+
+        # Display return to menu prompt with a dim glow effect
+        menu_prompt = flicker_font.render("Press ESC to Escape the Abyss", True, (139, 0, 0))  # Dark red
+        game_display.blit(menu_prompt, 
+            (SCREEN_WIDTH // 2 - menu_prompt.get_width() // 2, SCREEN_HEIGHT // 1.8))
+
+    # Add some flames at the bottom of the screen
+    # flames_image = load_image("flames.png")  # Load a flames image
+    # game_display.blit(flames_image, (0, SCREEN_HEIGHT - flames_image.get_height()))
+
+    pygame.display.update()
+
+
 def reinit():
 	global player
 	global platform_controller
