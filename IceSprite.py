@@ -8,7 +8,7 @@ class IceSprite(pygame.sprite.Sprite):
 		pygame.sprite.Sprite.__init__(self)
 
 		if IceSprite.image is None:
-			IceSprite.image = load_image("ice.png")
+			IceSprite.image = load_image("hellsteps.jpg")
 		
 		self.image = IceSprite.image
 
