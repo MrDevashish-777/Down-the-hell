@@ -1,9 +1,9 @@
-# Down-the-hell
- A Game Made By Devashish And Uday
-# icy_tower_clone
-Icy Tower Clone
+# down_the_hell
+Down The Hell
 
-Python 2.7 + PyGame
+Python  + PyGame
+
+Developed By T.Devashish Pillay and Uday Gawande
 
 ### How to run
 1. Clone repo
