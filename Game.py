@@ -105,7 +105,7 @@ while game_loop:
 		game_display.blit(background, (0, 0))
 		game_display.blit(arrow_image, (MENU_START_X + ARROW_HALF_WIDTH, MENU_START_Y + SCREEN_HEIGHT * selected_option - ARROW_HALF_HEIGHT))
 		if pygame.font:
-			message_display(game_display, "Icy Tower(clone)", 0, MENU_START_Y + round(SCREEN_HEIGHT * 0.15), 60, white, True)
+			message_display(game_display, "Down The Hell", 0, MENU_START_Y + round(SCREEN_HEIGHT * 0.15), 60, white, True)
 			message_display(game_display, "Play", 0, MENU_START_Y + round(SCREEN_HEIGHT * 0.30), 50, white, True)
 			message_display(game_display, "About", 0, MENU_START_Y + round(SCREEN_HEIGHT * 0.40), 50, white, True)
 			message_display(game_display, "Quit", 0, MENU_START_Y + round(SCREEN_HEIGHT * 0.50), 50, white, True)

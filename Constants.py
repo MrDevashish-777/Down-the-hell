@@ -12,7 +12,7 @@ ARROW_HALF_WIDTH = 43 #px
 
 GRAVITY = 1
 
-GAME_CAPTION = 'Icy Tower Clone'
+GAME_CAPTION = 'Down The Hell'
 
 ICE_RESISTANCE = 0.1
 
