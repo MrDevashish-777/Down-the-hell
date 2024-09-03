@@ -68,7 +68,7 @@ def reinit():
 reinit()
 
 try:
-	arrow_image = load_image("arrow.png")
+	arrow_image = load_image("fire-arrow.jpg")
 	background = load_image('pixel-hell.webp')
 except Exception as e:
 	print(f"Error loading images: {e}")
