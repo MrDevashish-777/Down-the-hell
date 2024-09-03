@@ -13,8 +13,8 @@ class Camera:
 		if self.player.y < SCREEN_HEIGHT / 2:
 			change = int(math.sqrt(score))/10
 			if not change:
-				self.y -= 1
+				self.y += 1
 			if(change<4):
-				self.y -= change
+				self.y += change
 			else:
-				self.y -= 4
+				self.y += 4
