@@ -26,7 +26,7 @@ class Player:
 		self.y = 3
 		self.score = -10 # negate floor platform
 
-		self.spritesheet_image = load_image('johnny-helll.jpg')
+		self.spritesheet_image = load_image('paradise king.png')
 		self.spritesheet = []
 
 		# Idle
